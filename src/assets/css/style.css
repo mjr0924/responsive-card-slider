@@ -15,13 +15,12 @@
   --container-color: hsl(212, 42%, 20%);
 
   /*=============== Font and typography ===============*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Bai Jamjuree", sans-serif;
   --h2-font-size: 1.25rem;
   --normal-font-size: 1rem;
 }
 
-/*=============== BASE ===============*/
+/*======================== BASE ========================*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -42,12 +41,12 @@ img {
   height: auto;
 }
 
-/*=============== CARD ===============*/
+/*==================== CARD ====================*/
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  height: 100vh;
 }
 .card_container {
   padding-block: 5rem;
@@ -113,11 +112,8 @@ img {
   font-weight: 600;
   color: var(--dark-color);
 }
-/* swiper class */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  /* content: ""; */
-}
+
+/*=============== Swiper Class ===============*/
 .swiper-button-next,
 .swiper-button-prev {
   width: initial;
@@ -127,10 +123,10 @@ img {
   display: none;
 }
 .swiper-button-prev {
-  left: 0;
+  left: 1rem;
 }
 .swiper-button-next {
-  right: 0;
+  right: 1rem;
 }
 .swiper-pagination-bullet {
   background-color: hsl(212, 32%, 40%);
@@ -140,7 +136,7 @@ img {
   background-color: var(--second-color);
 }
 
-/* Breakpoint */
+/*=============== Breakpoint ===============*/
 @media screen and (max-width: 320px) {
   .card_data {
     padding: 1rem;
@@ -148,7 +144,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .card_content {
-    margin-inline: 3rem;
+    margin-inline: 4rem;
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -158,11 +154,5 @@ img {
 @media screen and (min-width: 1120px) {
   .card_container {
     max-width: 1120px;
-  }
-  .swiper-button-next {
-    right: -1rem;
-  }
-  .swiper-button-prev {
-    left: -1rem;
   }
 }
